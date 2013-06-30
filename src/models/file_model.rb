@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # ファイルリストを扱うクラス
+# Author :: Shigeru Moriya <moriya@sarotti.net>
 class FileModel
 
   attr_reader :is_dir, :filename, :extention, :size, :timestamp
