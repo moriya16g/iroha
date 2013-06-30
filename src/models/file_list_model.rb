@@ -5,11 +5,6 @@ require File.expand_path(File.dirname(__FILE__) + '/file_model')
 # Authors :: Shigeru Moriya <moriya@sarotti.net>
 class FileListModel
   
-  # ファイルリストを取得するディレクトリ
-  @path = nil
-  # ファイルリスト
-  @list = []
-
   # コンストラクタ
   # ==== args
   # path :: ファイルリストを取得するディレクトリ

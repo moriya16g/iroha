@@ -2,16 +2,6 @@
 
 # ファイルリストを扱うクラス
 class FileModel
-  # ディレクトリかどうか
-  @is_dir
-  # ファイル・ディレクトリ名
-  @filename
-  # 拡張子
-  @extention
-  # サイズ
-  @size
-  # タイムスタンプ
-  @timestamp
 
   attr_reader :is_dir, :filename, :extention, :size, :timestamp
   
@@ -19,7 +9,7 @@ class FileModel
   # ==== args
   # f :: ファイル名
   def initialize(f)
-    @is_dir = is_dir(f)
+    @is_dir = is_dir?(f)
     @timestamp = get_timestamp(f)
     if @is_dir
       @filename = get_dirname(f)
@@ -38,10 +28,10 @@ class FileModel
   # ==== return
   # true :: ディレクトリである
   # false :: ファイルである
-  def is_dir(f)
+  def is_dir?(f)
     return File::stat(f).directory?
   end
-  private :is_dir
+  private :is_dir?
 
   # ファイル名を取得
   # ==== args
