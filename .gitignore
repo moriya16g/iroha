@@ -20,4 +20,5 @@ doc/
 #backup files
 *.*~
 *~
+*.swp
 
