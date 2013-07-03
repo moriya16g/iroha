@@ -32,17 +32,23 @@ class MainWindowView
   # 二画面ウィンドウを生成
   # ==== 
   def create_double_window(parent)
-    paned1 = TkPanedWindow.new(parent, :orient=>:vertical) {
-      paned2 = TkPanedWindow.new(paned1, :orient=>:horizontal) {
-        @left = TkCanvas.new(paned2, :bg=>'black')
-        @right = TkCanvas.new(paned2, :bg=>'black')
-        add @left, @right
-        pack(:fill=>:both, :expand=>true, :side=>:top)
-      }
-      @buttom = TkCanvas.new(paned1, :bg=>'black')
-      add paned2, @buttom
-      pack(:fill=>:both, :expand=>true, :side=>:top)
-    }
+    paned1 = TkPanedWindow.new(parent, :orient=>:vertical)
+    paned2 = TkPanedWindow.new(paned1, :orient=>:horizontal)
+    @left = TkCanvas.new(paned2, :bg=>'black')
+    @right = TkCanvas.new(paned2, :bg=>'black')
+    paned2.add @left, @right
+    paned2.pack(:fill=>:both, :expand=>true, :side=>:top)
+    @buttom = TkCanvas.new(paned1, :bg=>'black')
+    paned1.add paned2, @buttom
+    paned1.pack(:fill=>:both, :expand=>true, :side=>:top)
+    
+    TkcText.new(@left,
+	    5,5,
+	    :text => "この様にテキストも\n入力できます.",
+	    :fill => 'white',
+      :anchor=>:nw,
+      :font=>["ＭＳ 明朝", 12]
+	  )
   end
   
 end
