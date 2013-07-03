@@ -49,8 +49,8 @@ class FilerView < TkCanvas
   def resize
     clear
     (300/20).times {|i|
-      TkcText.new(self, 0, 20*i, :text=>"Hello World", :anchor=>:nw, 
-                  :fill=>'red', :font=>["ＭＳ 明朝", 20])
+      TkcText.new(self, 0, 20*i, :text=>'Hello World', :anchor=>'nw', 
+                  :fill=>'red', :font=>['ＭＳ 明朝', 20])
     }
   end
   
