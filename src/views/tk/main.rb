@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 require 'tk'
+require File.expand_path(File.dirname(__FILE__) + '/filer_view')
 
 # メインウィンドウを扱うクラス
 # Author :: Shigeru Moriya <moriya@sarotti.net>
@@ -34,21 +35,16 @@ class MainWindowView
   def create_double_window(parent)
     paned1 = TkPanedWindow.new(parent, :orient=>:vertical)
     paned2 = TkPanedWindow.new(paned1, :orient=>:horizontal)
-    @left = TkCanvas.new(paned2, :bg=>'black')
-    @right = TkCanvas.new(paned2, :bg=>'black')
+    @left = FilerView.new(paned2, :bg=>'black')
+    @right = FilerView.new(paned2, :bg=>'black')
     paned2.add @left, @right
     paned2.pack(:fill=>:both, :expand=>true, :side=>:top)
     @buttom = TkCanvas.new(paned1, :bg=>'black')
     paned1.add paned2, @buttom
-    paned1.pack(:fill=>:both, :expand=>true, :side=>:top)
-    
-    TkcText.new(@left,
-	    5,5,
-	    :text => "この様にテキストも\n入力できます.",
-	    :fill => 'white',
-      :anchor=>:nw,
-      :font=>["ＭＳ 明朝", 12]
-	  )
+    paned1.pack(:fill=>:both, :expand=>true, :side=>:top) 
+    @left.setup
+    @right.setup
+    @left.setup_size(400, 500)
   end
   
 end
