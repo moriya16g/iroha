@@ -6,7 +6,15 @@ require 'tk'
 class FilerView < TkCanvas
   
   # ファイラウィンドウをセットアップする
-  def setup
+  # c :: ConfigModel instance
+  def setup(c)
+    @fg_color = c.filer_fg_color
+    @bg_color = c.filer_bg_color
+    @font = c.filer_font
+    @font_size = c.filer_font_size
+    @font_color = c.filer_font_color
+    
+    
     self.bind('Configure', proc{resize})
     set_scrollbar
     set_scroll_region(1000) #ToDo
@@ -49,8 +57,8 @@ class FilerView < TkCanvas
   def resize
     clear
     (300/20).times {|i|
-      TkcText.new(self, 0, 20*i, :text=>'Hello World', :anchor=>'nw', 
-                  :fill=>'red', :font=>['ＭＳ 明朝', 20])
+      TkcText.new(self, 12*i, 12*i, :text=>'Hello World', :anchor=>'nw', 
+                  :fill=>@font_color, :font=>[@font, @font_size])
     }
   end
   
