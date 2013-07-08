@@ -6,18 +6,24 @@ require 'tk'
 class FilerView < TkCanvas
   
   # ファイラウィンドウをセットアップする
+  # ==== args
   # c :: ConfigModel instance
-  def setup(c)
+  # f :: FileListModel instance
+  def setup(c, f)
+    @x = 0
+    @y = 0
+    @f = f
+    
     @fg_color = c.filer_fg_color
     @bg_color = c.filer_bg_color
     @font = c.filer_font
     @font_size = c.filer_font_size
     @font_color = c.filer_font_color
     
-    
     self.bind('Configure', proc{resize})
     set_scrollbar
-    set_scroll_region(1000) #ToDo
+    set_scroll_region(@f.size * @font_size.to_i) 
+    
   end
 
   # ファイラウィンドウのサイズを調整する
@@ -36,30 +42,54 @@ class FilerView < TkCanvas
   # y :: 非表示も含めたウィンドウのy方向サイズ
   def set_scroll_region(y)
     @scr.unpack
-    scrollregion [0, 0, self.width, y]
+    self.scrollregion [0, 0, TkWinfo.width(self), y]
     if y > self.height
       set_scrollbar
     end
   end
+  private :set_scroll_region
   
   # スクロールバーを表示する
   def set_scrollbar
     @scr = TkScrollbar.new(self).pack(:fill=>'y', :side=>'right')
     self.yscrollbar @scr
   end
+  private :set_scrollbar
   
   # ウィンドウの描画をクリアする
   def clear
     self.delete('all')
   end
+  private :clear
 
   # ウィンドウサイズが変更されたときの処理
   def resize
-    clear
-    (300/20).times {|i|
-      TkcText.new(self, 12*i, 12*i, :text=>'Hello World', :anchor=>'nw', 
+    x , y = calc_text_count
+    if @x == x
+      return
+    else
+      clear
+      @x = x
+      @y = y
+    end
+     
+    (@f.size).times {|idx|
+      TkcText.new(self, 0, idx * @font_size.to_i, 
+                  :text=>@f.get_string(idx, x), :anchor=>'nw', 
                   :fill=>@font_color, :font=>[@font, @font_size])
-    }
+    }  
   end
+  private :resize
+  
+  # 画面サイズから表示できるテキストの文字数を算出
+  # ==== return
+  # x :: x方向の文字数
+  # y :: y方向の文字数
+  def calc_text_count
+    x = TkWinfo.width(self) / @font_size.to_i
+    y = TkWinfo.height(self) / @font_size.to_i
+    return x, y
+  end
+  private :calc_text_count
   
 end
