@@ -22,3 +22,8 @@ doc/
 *~
 *.swp
 
+#Xcode
+src/views/macruby/iroha/*.xcodeproj/*
+!src/views/macruby/iroha/*.xcodeproj/project.pbxproj
+!src/views/macruby/iroha/*.xcworkspace/contents.xcworkspacedata
+.DS_Store

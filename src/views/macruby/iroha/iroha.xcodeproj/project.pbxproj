@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CE59966178C624C00CF98EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE59965178C624C00CF98EF /* Cocoa.framework */; };
+		0CE59968178C624C00CF98EF /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE59967178C624C00CF98EF /* MacRuby.framework */; };
+		0CE59971178C624C00CF98EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5996F178C624C00CF98EF /* InfoPlist.strings */; };
+		0CE59973178C624D00CF98EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE59972178C624D00CF98EF /* main.m */; };
+		0CE59978178C624D00CF98EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE59976178C624D00CF98EF /* MainMenu.xib */; };
+		0CE5997B178C624D00CF98EF /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5997A178C624D00CF98EF /* rb_main.rb */; };
+		0CE5997D178C624D00CF98EF /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5997C178C624D00CF98EF /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CE5996A178C624C00CF98EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CE5995A178C624C00CF98EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CE59961178C624C00CF98EF;
+			remoteInfo = iroha;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0CE59962178C624C00CF98EF /* iroha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iroha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE59965178C624C00CF98EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0CE59967178C624C00CF98EF /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		0CE5996E178C624C00CF98EF /* iroha-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iroha-Info.plist"; sourceTree = "<group>"; };
+		0CE59970178C624C00CF98EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0CE59972178C624D00CF98EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0CE59974178C624D00CF98EF /* iroha-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iroha-Prefix.pch"; sourceTree = "<group>"; };
+		0CE59977178C624D00CF98EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0CE5997A178C624D00CF98EF /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		0CE5997C178C624D00CF98EF /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CE5995F178C624C00CF98EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE59966178C624C00CF98EF /* Cocoa.framework in Frameworks */,
+				0CE59968178C624C00CF98EF /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CE59959178C624C00CF98EF = {
+			isa = PBXGroup;
+			children = (
+				0CE5996C178C624C00CF98EF /* iroha */,
+				0CE59964178C624C00CF98EF /* Frameworks */,
+				0CE59963178C624C00CF98EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CE59963178C624C00CF98EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CE59962178C624C00CF98EF /* iroha.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CE59964178C624C00CF98EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CE59965178C624C00CF98EF /* Cocoa.framework */,
+				0CE59967178C624C00CF98EF /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CE5996C178C624C00CF98EF /* iroha */ = {
+			isa = PBXGroup;
+			children = (
+				0CE5997C178C624D00CF98EF /* AppDelegate.rb */,
+				0CE59975178C624D00CF98EF /* Resources */,
+				0CE59979178C624D00CF98EF /* Other Sources */,
+				0CE5996D178C624C00CF98EF /* Supporting Files */,
+			);
+			path = iroha;
+			sourceTree = "<group>";
+		};
+		0CE5996D178C624C00CF98EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CE5996E178C624C00CF98EF /* iroha-Info.plist */,
+				0CE5996F178C624C00CF98EF /* InfoPlist.strings */,
+				0CE59972178C624D00CF98EF /* main.m */,
+				0CE59974178C624D00CF98EF /* iroha-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CE59975178C624D00CF98EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CE59976178C624D00CF98EF /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0CE59979178C624D00CF98EF /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0CE5997A178C624D00CF98EF /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		0CE59969178C624C00CF98EF /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 0CE59983178C624D00CF98EF /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				0CE5996B178C624C00CF98EF /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		0CE59961178C624C00CF98EF /* iroha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE59980178C624D00CF98EF /* Build configuration list for PBXNativeTarget "iroha" */;
+			buildPhases = (
+				0CE5995E178C624C00CF98EF /* Sources */,
+				0CE5995F178C624C00CF98EF /* Frameworks */,
+				0CE59960178C624C00CF98EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iroha;
+			productName = iroha;
+			productReference = 0CE59962178C624C00CF98EF /* iroha.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CE5995A178C624C00CF98EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = moriya;
+			};
+			buildConfigurationList = 0CE5995D178C624C00CF98EF /* Build configuration list for PBXProject "iroha" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0CE59959178C624C00CF98EF;
+			productRefGroup = 0CE59963178C624C00CF98EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CE59961178C624C00CF98EF /* iroha */,
+				0CE59969178C624C00CF98EF /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CE59960178C624C00CF98EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE59971178C624C00CF98EF /* InfoPlist.strings in Resources */,
+				0CE59978178C624D00CF98EF /* MainMenu.xib in Resources */,
+				0CE5997B178C624D00CF98EF /* rb_main.rb in Resources */,
+				0CE5997D178C624D00CF98EF /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CE5995E178C624C00CF98EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE59973178C624D00CF98EF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CE5996B178C624C00CF98EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CE59961178C624C00CF98EF /* iroha */;
+			targetProxy = 0CE5996A178C624C00CF98EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CE5996F178C624C00CF98EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CE59970178C624C00CF98EF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0CE59976178C624D00CF98EF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CE59977178C624D00CF98EF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CE5997E178C624D00CF98EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0CE5997F178C624D00CF98EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0CE59981178C624D00CF98EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"/Library/Frameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iroha/iroha-Prefix.pch";
+				INFOPLIST_FILE = "iroha/iroha-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0CE59982178C624D00CF98EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"/Library/Frameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iroha/iroha-Prefix.pch";
+				INFOPLIST_FILE = "iroha/iroha-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0CE59984178C624D00CF98EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0CE59985178C624D00CF98EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CE5995D178C624C00CF98EF /* Build configuration list for PBXProject "iroha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE5997E178C624D00CF98EF /* Debug */,
+				0CE5997F178C624D00CF98EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CE59980178C624D00CF98EF /* Build configuration list for PBXNativeTarget "iroha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE59981178C624D00CF98EF /* Debug */,
+				0CE59982178C624D00CF98EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0CE59983178C624D00CF98EF /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE59984178C624D00CF98EF /* Debug */,
+				0CE59985178C624D00CF98EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CE5995A178C624C00CF98EF /* Project object */;
+}
