@@ -13,8 +13,7 @@ class AppDelegate
     attr_accessor :bottom_message
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
-
-        #left_filer.setFocus
+        @left_filer.setFrameSize(NSSize.new(500,1000))
         @str = NSAttributedString.new.initWithString("Hello")
         @point = NSPoint.new(0,0)
         @str.drawAtPoint(@point)
